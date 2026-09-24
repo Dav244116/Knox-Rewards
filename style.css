@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #080808;
+  color: white;
+  line-height: 1.5;
+}
+
+header {
+  height: 70px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #111;
+  border-bottom: 1px solid #292929;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#menuBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+nav {
+  display: none;
+  background: #111;
+  padding: 15px 7%;
+  border-bottom: 1px solid #292929;
+}
+
+nav.show {
+  display: block;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+main {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero h1 {
+  font-size: clamp(35px, 8vw, 65px);
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.primary {
+  border: none;
+  padding: 14px 25px;
+  border-radius: 10px;
+  background: #ff1744;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.primary:hover {
+  opacity: 0.85;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 70px;
+}
+
+.card {
+  background: #121212;
+  border: 1px solid #292929;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+}
+
+.card span {
+  font-size: 25px;
+}
+
+.card h3 {
+  font-size: 25px;
+  margin-top: 8px;
+}
+
+.card p {
+  color: #888;
+}
+
+section {
+  margin-bottom: 70px;
+}
+
+section h2 {
+  margin-bottom: 20px;
+}
+
+.tasks {
+  display: grid;
+  gap: 15px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background: #121212;
+  border: 1px solid #292929;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.task p {
+  color: #888;
+  font-size: 14px;
+}
+
+.task button,
+.referral button {
+  border: none;
+  background: #222;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.task button:hover,
+.referral button:hover {
+  background: #333;
+}
+
+.wallet-box,
+.refer-box {
+  background: #121212;
+  border: 1px solid #292929;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.wallet-box strong {
+  display: block;
+  font-size: 30px;
+  margin: 5px 0 20px;
+}
+
+.wallet-box small {
+  display: block;
+  color: #777;
+  margin-top: 15px;
+}
+
+.referral {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.referral span {
+  flex: 1;
+  background: #080808;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.refer-box p {
+  color: #aaa;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #111;
+  color: #777;
+}
+
+#toast {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 60px 10px;
+  }
+
+  .task {
+    align-items: flex-start;
+  }
+                   }
