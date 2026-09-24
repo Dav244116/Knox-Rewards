@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knox Rewards</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">👑 KNOX REWARDS</div>
+    <button id="menuBtn">☰</button>
+  </header>
+
+  <nav id="nav">
+    <a href="#home">Home</a>
+    <a href="#tasks">Tasks</a>
+    <a href="#wallet">Wallet</a>
+    <a href="#refer">Refer</a>
+  </nav>
+
+  <main>
+
+    <section id="home" class="hero">
+      <h1>Earn Rewards With Knox</h1>
+      <p>Complete legitimate tasks and collect points.</p>
+      <button class="primary" onclick="scrollToTasks()">Start Earning</button>
+    </section>
+
+    <section class="stats">
+      <div class="card">
+        <span>⭐</span>
+        <h3 id="points">0</h3>
+        <p>Points</p>
+      </div>
+
+      <div class="card">
+        <span>💰</span>
+        <h3 id="balance">₦0.00</h3>
+        <p>Demo Balance</p>
+      </div>
+
+      <div class="card">
+        <span>🎯</span>
+        <h3 id="completed">0</h3>
+        <p>Tasks Done</p>
+      </div>
+    </section>
+
+    <section id="tasks">
+      <h2>Available Tasks</h2>
+
+      <div class="tasks">
+
+        <div class="task">
+          <div>
+            <h3>📖 Read & Learn</h3>
+            <p>Read the task information.</p>
+          </div>
+          <button onclick="completeTask(50, this)">+50</button>
+        </div>
+
+        <div class="task">
+          <div>
+            <h3>🧠 Quick Quiz</h3>
+            <p>Complete a simple quiz.</p>
+          </div>
+          <button onclick="completeTask(100, this)">+100</button>
+        </div>
+
+        <div class="task">
+          <div>
+            <h3>🌐 Visit Partner</h3>
+            <p>Visit a legitimate partner page.</p>
+          </div>
+          <button onclick="completeTask(75, this)">+75</button>
+        </div>
+
+        <div class="task">
+          <div>
+            <h3>🎮 Daily Challenge</h3>
+            <p>Complete today's challenge.</p>
+          </div>
+          <button onclick="completeTask(150, this)">+150</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="wallet" class="wallet">
+      <h2>💳 Wallet</h2>
+
+      <div class="wallet-box">
+        <p>Available Points</p>
+        <strong id="walletPoints">0</strong>
+
+        <p>Demo Value</p>
+        <strong id="walletMoney">₦0.00</strong>
+
+        <button class="primary" onclick="requestPayout()">
+          Request Payout
+        </button>
+
+        <small>
+          Payouts are not connected yet. This is a frontend demo.
+        </small>
+      </div>
+    </section>
+
+    <section id="refer">
+      <h2>🎁 Invite Friends</h2>
+
+      <div class="refer-box">
+        <p>Share your referral code:</p>
+
+        <div class="referral">
+          <span id="refCode">KNOX2026</span>
+          <button onclick="copyReferral()">Copy</button>
+        </div>
+
+        <p>Referral system will be connected to the backend later.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Knox Rewards</p>
+    <p>Earn responsibly. No guaranteed income.</p>
+  </footer>
+
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+  </html>
